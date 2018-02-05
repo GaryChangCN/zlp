@@ -2,6 +2,10 @@
 
 非常简单的 react 数据流工具
 
+## 安装
+
+npm install zlp
+
 ## 使用
 
 ```js
