@@ -1,0 +1,31 @@
+{
+  "name": "zlp",
+  "version": "1.0.0",
+  "description": "single react data flow tools",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfg.json"
+  },
+  "keywords": [
+    "react",
+    "dataflow"
+  ],
+  "author": "garychangcn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GaryChangCN/zlp"
+  },
+  "license": "MIT",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/react": "^16.0.36",
+    "typescript": "^2.7.1"
+  },
+  "dependencies": {
+    "lodash.set": "^4.3.2",
+    "react": "^16.2.0"
+  }
+}
