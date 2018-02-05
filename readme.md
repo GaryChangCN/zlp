@@ -29,6 +29,8 @@ export default new A()
 import { connect } from 'zlp'
 import a from '/store/a'
 
+// 一个组件可以绑定多个 store
+@connect([a])
 class Index extends React.Component {
     render () {
         return (
@@ -42,7 +44,8 @@ class Index extends React.Component {
     }
 }
 
-// 一个组件可以绑定多个 store
-export default connect([a], Index)
+
+// 如果不支持修饰符可以用以下使用方式
+export default connect([a])(Index)
 
 ```
