@@ -1,7 +1,7 @@
 /// <reference types="react" />
 import * as React from 'react';
 import Store from './store';
-export default function connect(stores: Store[], Component: React.ReactType): {
+export default function connect(stores: Store[]): (Component: React.ReactType<any>) => {
     new (props: any): {
         componentWillMount(): void;
         componentWillUnmount(): void;
