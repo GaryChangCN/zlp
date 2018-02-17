@@ -6,10 +6,16 @@ interface ConnectStore {
     handle?: () => void
 }
 
-export default function connect (stores: Store[]) {
+export default function connect (stores: Store[]): any {
+    let arr: Store[] = []
+    if (Array.isArray(stores)) {
+        arr = stores
+    } else {
+        arr = Array.from(stores)
+    }
     return function (Component: React.ReactType) {
         const list: ConnectStore[] = []
-        for (const store of stores) {
+        for (const store of arr) {
             if (store instanceof Store) {
                 list.push({ store })
             } else {
