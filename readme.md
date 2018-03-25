@@ -34,7 +34,7 @@ import { connect } from 'zlp'
 import a from '/store/a'
 
 // 一个组件可以绑定多个 store  a\b\c 都是 store 示例
-@connect(a, b, c)
+@connect([a, b, c])
 class Index extends React.Component {
     render () {
         return (

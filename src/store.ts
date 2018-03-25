@@ -11,7 +11,6 @@ class Store {
 
     protected setStore (path, value) {
         set(this.store, path, value)
-        this.store[path] = value
         this.emit('change')
     }
 
