@@ -6,7 +6,7 @@ interface ConnectStore {
     handle?: () => void
 }
 
-export default function connect (stores: Store[]): any {
+export default function connect (stores: Store[] | any): any {
     let arr: Store[] = []
     if (Array.isArray(stores)) {
         arr = stores

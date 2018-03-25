@@ -1,6 +1,6 @@
 {
   "name": "zlp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "single react data flow tools",
   "main": "lib/index.js",
   "scripts": {

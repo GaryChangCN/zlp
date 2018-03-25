@@ -1,4 +1,4 @@
-import set from 'lodash.set'
+import * as set from 'lodash.set'
 
 class Store {
     store: {
