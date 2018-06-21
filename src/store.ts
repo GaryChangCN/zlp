@@ -28,8 +28,12 @@ class Store {
     }
 
     protected emit (event: string) {
-        for (const events of this.subscribes[event]) {
-            events()
+        const subscribers = this.subscribes[event]
+        if (!subscribers) {
+            return
+        }
+        for (const subscriber of subscribers) {
+            subscriber()
         }
     }
 }
