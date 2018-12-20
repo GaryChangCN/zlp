@@ -1,13 +1,14 @@
 import * as React from 'react'
-import Store from './store'
+import BaseStore from './base-store'
 
 interface ConnectStore {
-    store: Store
+    store: BaseStore
     handle?: () => void
 }
 
-export default function connect (stores: any | Store[]): any {
-    let arr: Store[] = []
+
+export default function connect (stores: any | BaseStore[]): any {
+    let arr: BaseStore[] = []
     if (Array.isArray(stores)) {
         arr = stores
     } else {
@@ -16,7 +17,7 @@ export default function connect (stores: any | Store[]): any {
     return function (Component: React.ReactType) {
         const list: ConnectStore[] = []
         for (const store of arr) {
-            if (store instanceof Store) {
+            if (store instanceof BaseStore) {
                 list.push({ store })
             } else {
                 throw new Error(`connect first arguments is array of Store's instance`)
