@@ -10,7 +10,6 @@ class ProxyStore extends BaseStore {
 
         return new Proxy(this, {
             set (target, name, val) {
-                console.log('set')
                 if (name === 'store') {
                     target[name] = deepProxy(val, (type, t, p, v) => {
                         self.emit('change')
